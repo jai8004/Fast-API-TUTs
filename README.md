@@ -183,14 +183,15 @@ Visit: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for Swagger UI.
 
 ## 🧠 Why Each Component?
 
-| Component        | Purpose                                                              |
-| ---------------- | -------------------------------------------------------------------- |
-| FastAPI          | Fast web framework with built-in docs, validation, and async support |
-| SQLAlchemy       | ORM to interact with database using Python classes                   |
-| SQLite           | Lightweight DB ideal for dev/testing                                 |
-| Pydantic         | Validates and serializes request/response models                     |
-| Passlib\[bcrypt] | Secure password hashing                                              |
-| Python-JOSE      | JWT creation and decoding                                            |
-| Uvicorn          | ASGI server that runs the FastAPI app                                |
+| Package           | Purpose                                                   |
+| ----------------- | --------------------------------------------------------- |
+| `fastapi`         | Main web framework to build APIs                          |
+| `uvicorn`         | ASGI server to run FastAPI apps                           |
+| `sqlalchemy`      | ORM to interact with SQL-based databases                  |
+| `pydantic[email]` | Validates request/response data (with email support)      |
+| `passlib[bcrypt]` | Hashing passwords securely using bcrypt                   |
+| `python-jose`     | To generate and decode JWT tokens                         |
+| `email-validator` | Used under the hood by Pydantic to validate email formats |
+| `bcrypt<4.1`      | Avoids recent breaking changes in bcrypt 4.1+             |
 
 ---
